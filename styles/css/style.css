@@ -1,0 +1,411 @@
+/* 🌟 ~~~ General Styles ~~~ 🌟 */
+
+@import url("../animations/animation_page.css");
+@import url("loading_page.css");
+
+:root {
+  --color-555: #555;
+  --color-333: #333;
+  --color-fff: #fff;
+  --color-1c548d: #1c548d;
+  --color-69175f: #69175f;
+  --color-e4ebf5: #e4ebf5;
+  --color-c8d0e7: #c8d0e7;
+  --color-4070f4: #4070f4;
+  --color-f3f3f3: #f3f3f3;
+  --color-skillbar-bg: rgba(0, 0, 0, 0.1);
+  --color-rgba-255-01: rgba(255, 255, 255, 0.1);
+  --color-rgba-50-025: rgba(50, 50, 93, 0.25);
+  --color-rgba-0-03: rgba(0, 0, 0, 0.3);
+  --color-rgba-5-198: rgba(5, 198, 239, 1) 0%;
+  --color-rgba-14-46: rgb(14, 46, 189) 100%;
+}
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-555);
+}
+ul {
+  list-style: none;
+}
+h4 {
+  align-self: flex-start;
+  justify-self: center;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-fff);
+  background: var(--color-1c548d);
+  font-weight: 600;
+  padding: 2px 20px;
+  display: inline-flex;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-e4ebf5);
+  width: 100%;
+  font-family: sans-serif;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background-color: var(--color-e4ebf5);
+  margin: 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: inset 0.3rem 0 0.6rem var(--color-c8d0e7),
+    inset -0.3rem -0.3rem 0.6rem var(--color-fff);
+}
+
+/* 🌟 ~~~ Top Styles ~~~ 🌟 */
+
+.top {
+  position: relative;
+  width: 90%;
+  height: 400px;
+  background: linear-gradient(
+    114deg,
+    var(--color-rgba-5-198),
+    var(--color-rgba-14-46)
+  );
+  padding: 50px;
+  border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
+  animation: top-bg-animation 3s ease infinite;
+  -webkit-animation: top-bg-animation 3s ease infinite;
+  background-size: 130% 130%;
+}
+.top__info {
+  font-size: 30px;
+  color: var(--color-fff);
+  text-transform: uppercase;
+  line-height: 0.7em;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+}
+.top__info h2 {
+  transform: translateY(-800px);
+  -webkit-transform: translateY(-800px);
+  -moz-transform: translateY(-800px);
+  -ms-transform: translateY(-800px);
+  -o-transform: translateY(-800px);
+  opacity: 0;
+  animation: top-info-h2-animation 1s 4s forwards;
+  -webkit-animation: top-info-h2-animation 1s 4s forwards;
+}
+.top__info > span {
+  letter-spacing: -13px;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 300;
+  animation: top-info-span-animation 1s 5s forwards;
+  -webkit-animation: top-info-span-animation 1s 5s forwards;
+}
+.top__group {
+  position: relative;
+  display: inline-grid;
+  gap: 40px;
+  width: 100%;
+  grid-template-columns: 2fr 3fr;
+  margin-top: 20px;
+}
+.top__group .group__leftSide .leftSide__imgBox {
+  position: relative;
+  width: 100%;
+}
+.top__group .group__leftSide .leftSide__imgBox img {
+  height: 350px;
+  width: 337px;
+  margin-top: 10px;
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: var(--color-rgba-255-01) 0px 1px 1px 0px inset,
+    var(--color-rgba-50-025) 0px 50px 100px -20px,
+    var(--color-rgba-0-03) 0px 30px 60px -30px;
+  animation: my-pic-animation 1s 3s forwards;
+  -webkit-animation: my-pic-animation 1s 3s forwards;
+}
+.group__rightSide {
+  padding-top: 25px;
+}
+.rightSide__container-p {
+  width: max-content;
+  margin-bottom: 0.5rem;
+}
+.top__group .group__rightSide .rightSide__container-p p {
+  color: var(--color-fff);
+  font-size: 1.25em;
+  border-right: 0.15em solid var(--color-fff);
+  height: 22px;
+  overflow: hidden;
+  animation: typing-text-top-rightside 1.3s steps(15) 1 normal both,
+    cursor-typing 0.75s step-end 1.9;
+  -webkit-animation: typing-text-top-rightside 1.3s steps(15) 1 normal both,
+    cursor-typing 0.75s step-end 1.9;
+  animation-delay: var(--delay);
+}
+
+/* 🌟 ~~~ General Bottom Styles ~~~ 🌟 */
+
+.bottom {
+  padding: 54px 40px 40px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "contact hobbies"
+    "education hobbies"
+    "skills hobbies";
+  gap: 48px;
+}
+
+/* 🌟 ~~~ ContactInfo Styles ~~~ 🌟 */
+
+.contactInfo {
+  padding: 20px;
+  align-self: center;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--color-c8d0e7),
+    -0.3rem -0.3rem 0.6rem var(--color-fff);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  grid-area: contact;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  transform: scale(0);
+  animation: show-box-content 600ms ease-out 6s forwards;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-animation: show-box-content 600ms ease-out 6s forwards;
+}
+.contactInfo li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+.contactInfo li .contactInfo__icon {
+  color: var(--color-1c548d);
+  animation: flash-icon-animation 2ms ease-in-out 8s 450 alternate;
+  -webkit-animation: flash-icon-animation 2ms ease-in-out 8s 450 alternate;
+}
+.contactInfo li .contactInfo__text {
+  color: var(--color-555);
+}
+
+/* 🌟 ~~~ Education Styles ~~~ 🌟 */
+
+.edu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 29px;
+  padding: 20px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--color-c8d0e7),
+    -0.3rem -0.3rem 0.6rem var(--color-fff);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  animation: show-box-content 600ms ease-out 6s forwards;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-animation: show-box-content 600ms ease-out 6s forwards;
+  grid-area: education;
+}
+.edu-box p {
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+.edu-box p:nth-child(2) {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 🌟 ~~~ Skill Styles ~~~ 🌟 */
+
+.skillsBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--color-c8d0e7),
+    -0.3rem -0.3rem 0.6rem var(--color-fff);
+  border-radius: 20px;
+  padding: 30px 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  animation: show-box-content 600ms ease-out 6s forwards;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-animation: show-box-content 600ms ease-out 6s forwards;
+  grid-area: skills;
+}
+.skillsBox .skillsBox__skill {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 3fr;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+.skillsBox .skillsBox__skill p {
+  color: var(--color-333);
+}
+.skillsBox .skillsBox__skill .skill__value {
+  position: relative;
+  width: 80%;
+  height: 10px;
+  background-color: var(--color-skillbar-bg);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.skillsBox .skillsBox__skill .skill__progress {
+  content: "";
+  position: relative;
+  width: var(--fill-percentage);
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-rgba-5-198),
+    var(--color-rgba-14-46)
+  );
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  opacity: 0;
+  animation: fill-bar 4s ease-in-out forwards;
+  -webkit-animation: fill-bar 4s ease-in-out forwards;
+  animation-delay: 6s;
+}
+.progress__tolltip::after {
+  content: "0%";
+  position: absolute;
+  right: -17px;
+  top: -20px;
+  width: max-content;
+  font-size: 10px;
+  background-color: var(--color-4070f4);
+  color: var(--color-fff);
+  font-weight: bold;
+  padding: 2px 6px;
+  z-index: 1;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  animation: var(--display-number) 4s 6s forwards;
+  -webkit-animation: var(--display-number) 4s 6s forwards;
+}
+
+/* 🌟 ~~~ Hobby Styles ~~~ 🌟 */
+
+.hobbies {
+  animation: show-box-content 600ms ease-out 6s forwards;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-animation: show-box-content 600ms ease-out 6s forwards;
+  box-shadow: inset 0.3rem 0.3rem 0.6rem var(--color-c8d0e7),
+    inset -0.3rem -0.3rem 0.6rem var(--color-fff);
+  padding: 20px 20px 30px 20px;
+  border-radius: 20px;
+  align-self: center;
+  grid-row: 1 / 4;
+}
+.hobbies ul {
+  display: flex;
+  row-gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.hobbies ul li {
+  color: var(--color-333);
+  display: flex;
+  flex-direction: column;
+  width: 102px;
+  height: 83px;
+  gap: 10px;
+  background: var(--color-f3f3f3);
+  text-align: center;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--color-c8d0e7),
+    -0.3rem -0.3rem 0.6rem var(--color-fff);
+  animation: display-hobbies 1s var(--delay) ease-out forwards;
+  -webkit-animation: display-hobbies 1s var(--delay) ease-out forwards;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  opacity: 0;
+  justify-content: center;
+  grid-area: hobbies;
+}
+.hobbies .hobbies__icon {
+  font-size: 2rem;
+  animation: flash-icon-animation 2ms ease-in-out 8s 450 alternate;
+  -webkit-animation: flash-icon-animation 2ms ease-in-out 8s 450 alternate;
+}
