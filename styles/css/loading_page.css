@@ -1,0 +1,54 @@
+@import url("../animations/animation_loading_page.css");
+
+.loading_page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 1000;
+  background: linear-gradient(
+    45deg,
+    rgba(5, 198, 239, 0.6),
+    rgba(14, 46, 189, 0.6)
+  );
+  backdrop-filter: blur(22px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  animation: hidden-bg-animation 1.2s 2s ease-in-out forwards;
+  -webkit-animation: hidden-bg-animation 1.2s 2s ease-in-out forwards;
+}
+.loading_page .loading_page__circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+.loading_page__circles .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transform: scale(0);
+  border-radius: 100%;
+  animation: loading-animation 1s ease-in-out 2;
+  -webkit-animation: loading-animation 1s ease-in-out 2;
+}
+.loading_page__circles .circle:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.loading_page__circles .circle:nth-child(3) {
+  animation-delay: 0.22s;
+}
+.loading_page p {
+  font-size: 20px;
+  color: #ffff;
+  opacity: 0;
+  letter-spacing: 1px;
+  font-style: italic;
+  animation: loading-page-text-animation 900ms 400ms ease-in-out forwards;
+  -webkit-animation: loading-page-text-animation 900ms 400ms ease-in-out
+    forwards;
+}
